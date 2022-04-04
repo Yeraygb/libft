@@ -6,11 +6,11 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 16:03:03 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/01 10:27:37 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/04 16:25:23 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
@@ -21,13 +21,12 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	auxd = (unsigned char *) dest;
 	auxs = (unsigned const char *) src;
 	i = 0;
-	while (i < len)
-	{
-		auxd[i] = auxs[i];
-		i++;
-	}
-	return (0);
+	if (!dest && !src)
+		return (NULL);
+	if (auxd < auxs)
+		ft_memcpy(dest, src, len);
+	else if (auxd > auxs)
+		while (len--)
+			auxd[len] = auxs[len];
+	return (dest);
 }
-/*
-** no se
-*/

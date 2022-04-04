@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:00:54 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/01 15:45:46 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/04 15:35:01 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,31 @@
 /*
 ** function return the length of dst + the length of src
 */
-size_t	ft_strlcat(char *dest, char *src, size_t	size)
+size_t	ft_strlcat(char *dest, const char *src, size_t	size)
 {
-	size_t	i;
+	size_t	dest_len;
+	size_t	src_len;
 	size_t	count;
 
-	i = 0;
+	dest_len = ft_strlen(dest);
+	src_len = ft_strlen(src);
 	count = 0;
-	while (src[count])
-		count++;
-	while (dest[count])
-		count++;
-	if (src)
+	if (size < 1 || size <= dest_len)
+		return (src_len + size);
+	while (count < (size - dest_len - 1) && src[count])
 	{
-		while (src[i] && i < (size - 1))
-		{
-			dest[count] = src[i];
-			i++;
-			count++;
-		}
+		dest[dest_len + count] = src[count];
+		count++;
 	}
-	dest [i] = '\0';
-	return (count);
+	dest[dest_len + count] = '\0';
+	return (dest_len + src_len);
 }
 
 /* int	main(void)
 {
-	char	c[] = "hola";
-	char	d[] = "mundo";
+	char	c[] = "a";
+	char	d[] = "lorem";
 
 	printf("%zu\n", ft_strlcat(c, d, 1));
 	printf("%zu", strlcat(c, d, 1));
-}
-*/
+} */
