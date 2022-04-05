@@ -6,7 +6,7 @@
 #    By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/01 10:12:49 by ygonzale          #+#    #+#              #
-#    Updated: 2022/04/01 13:04:03 by ygonzale         ###   ########.fr        #
+#    Updated: 2022/04/05 16:54:10 by ygonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c \
 		ft_memset.c ft_strchr.c ft_strlcat.c \
 		ft_strlcpy.c ft_strlen.c ft_strncmp.c \
 		ft_strnstr.c ft_strrchr.c ft_tolower.c \
-		ft_toupper.c ft_strdup.c
+		ft_toupper.c ft_strdup.c ft_substr.c \
+		ft_strjoin.c ft_strtrim.c
 		
 OBJS = $(SRC:.c=.o)
 

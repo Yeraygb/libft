@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 10:27:45 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/04 15:54:57 by ygonzale         ###   ########.fr       */
+/*   Created: 2022/04/05 09:14:22 by ygonzale          #+#    #+#             */
+/*   Updated: 2022/04/05 15:04:19 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-** function search the first chararacter in the string and return a pointer
-*/
-char	*ft_strchr(const char *s, int c)
-{
-	int	i;
-	int	n;
 
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*str;
+	size_t	i;
+	size_t	j;
+
+	str = malloc(sizeof(char *) * (len + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
-	n = ft_strlen(s);
-	if (n == '\0')
-		return ((char *)&s[0]);
-	while (s[i] != '\0')
+	j = 0;
+	while (s[i])
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
 		i++;
 	}
-	if (s[i] == c)
-		return ((char *)&s[i]);
-	return (NULL);
+	str[j] = '\0';
+	return (str);
 }
 
 /* int	main(void)
 {
-	char	s1[] = "bonjour";
-	char	d = '\0';
+	char	s1[] = "lorem ipsum dolor sit amet";
 
-	printf("%s", ft_strchr(s1, d));
-	printf("%s", strchr(s1, d));
+	printf("%s", ft_substr(s1, 7, 10));
 } */

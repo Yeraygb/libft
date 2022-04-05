@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 11:37:16 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/04 16:28:16 by ygonzale         ###   ########.fr       */
+/*   Created: 2022/04/05 16:59:21 by ygonzale          #+#    #+#             */
+/*   Updated: 2022/04/05 17:16:53 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void	*src, size_t n)
+static int ft_len_itoa(int n)
 {
-	unsigned char		*auxd;
-	unsigned const char	*auxs;
-	size_t				i;
+	int i;
 
-	auxd = (unsigned char *) dest;
-	auxs = (unsigned const char *) src;
 	i = 0;
-	while (i < n)
+	while (n > 0)
 	{
-		auxd[i] = auxs[i];
-		i++;
+		i++
 	}
-	return (dest);
 }
 
-/* int	main(void)
+char	*ft_itoa(int n)
 {
-	char	c[] = "hola";
-	char	d[] = "mundo";
+	char	*str;
 
-	printf("%s", ft_memcpy(c, d, 2));
-	printf("%s", memcpy(c, d, 2));
+	str = malloc(sizeof(char *) * 
 }
-*/

@@ -6,12 +6,21 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:13:56 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/04 10:00:08 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/05 10:52:51 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Busca una string en otra
+**
+** @param {const char} Primera string en la que busca
+** @param {const char} Segunda string que busca en la primera
+** @param {size_t} La cantidad hasta donde busca
+**
+** @return {char} La direde la 1 string desde que coinciden las 2 strings
+*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
