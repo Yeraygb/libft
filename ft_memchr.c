@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:35:35 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/01 13:32:22 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/07 10:56:03 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
-	char			*aux;
+	unsigned char	*aux;
 
-	aux = (char *)s;
+	aux = (unsigned char *)s;
 	i = 0;
 	while (aux[i] && i < n)
 	{
-		if (aux[i] == c)
+		if (aux[i] == (unsigned char)c)
 			return (&aux[i]);
 		i++;
 	}
@@ -33,8 +33,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 /* int	main(void)
 {
-	int	a[7] = {-49, 49, 1, -1, 0, -2, 2};
+	int	a[7] = {0, 1, 2 ,3 ,4 ,5};
 	//char	b = 'a';
-	printf("%s", (char *)ft_memchr(a, -1, 7));
+	printf("%s", (char *)ft_memchr(a, 2, 3));
 }
-*/
+ */

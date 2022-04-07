@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:46:33 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/03/31 13:47:01 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/07 11:09:57 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t				i;
-	unsigned const char	*aux1;
-	unsigned const char	*aux2;
+	unsigned char		*aux1;
+	unsigned char		*aux2;
 
 	i = 0;
-	aux1 = (unsigned const char *) s1;
-	aux2 = (unsigned const char *) s2;
+	aux1 = (unsigned char *) s1;
+	aux2 = (unsigned char *) s2;
 	while ((aux1[i] || aux2[i]) && i < n)
 	{
 		if (aux1[i] > aux2[i])
@@ -32,13 +32,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-/* 
-int	main(void)
+/* int	main(void)
 {
-	char	a[] = "test\200";
-	char	b[] = "test\0";
+	char	a[] = {0, 0, 127, 0};
+	char	b[] = {0, 0, 42, 0};
 
-	printf("%d\n", ft_memcmp(a, b, 6));
-	printf("%d", memcmp(a, b, 6));
+	printf("%d\n", ft_memcmp(a, b, 4));
+	printf("%d", memcmp(a, b, 4));
 }
-*/
+ */

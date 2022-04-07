@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 10:51:11 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/07 12:23:03 by ygonzale         ###   ########.fr       */
+/*   Created: 2022/04/07 15:13:34 by ygonzale          #+#    #+#             */
+/*   Updated: 2022/04/07 16:22:10 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	size_t	len_s;
-	size_t	i;
+	long int	i;
 
-	len_s = ft_strlen(s);
-	str = malloc(sizeof(char *) * (len_s + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (s[i] != '\0')
+	i = n;
+	if (0 > i)
 	{
-		str[i] = f(i, s[i]);
-		i++;
+		write(fd, "-", 1);
+		i = -i;
 	}
-	str[i] = '\0';
-	return (str);
+	if (i > 10)
+	{
+		ft_putnbr_fd(i / 10, fd);
+	}
+	ft_putchar_fd((i % 10) + '0', fd);
 }
-
-/* int	main(void)
-{
-	char	s1[] = "hola";
-	char	
-
-	printf
-}
- */
