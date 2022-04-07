@@ -6,12 +6,23 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 09:14:22 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/05 15:04:19 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/06 12:15:34 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** La funcion reserva memoria para crear una suybstring empezando por start
+** y tiene una longitud max
+**
+** @param {char const *s} La string que quieres copiar
+** @param {unsigned int start} El indice start por el que quieres que empieze a
+** copiar
+** @param {size_t len} El tamaño que quieres copiar
+**
+** @return {char} La nueva substring
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
@@ -40,5 +51,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	s1[] = "lorem ipsum dolor sit amet";
 
-	printf("%s", ft_substr(s1, 7, 10));
+	printf("%s", ft_substr(s1, 7, 10));<
 } */

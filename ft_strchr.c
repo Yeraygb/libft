@@ -6,13 +6,19 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:27:45 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/04 15:54:57 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/06 09:51:55 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 /*
-** function search the first chararacter in the string and return a pointer
+** Funcion busca el primer caracter que coincide en 2 strings
+**
+** @param {const char *s} La string en la que se quiere buscar un parametro
+** @param {int c} El parametro que quieres buscar
+**
+** @return {char} La direc de la *s desde que ha encontrado la 1º coincidencia
 */
 char	*ft_strchr(const char *s, int c)
 {

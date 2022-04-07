@@ -6,12 +6,20 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 10:40:09 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/04 12:44:22 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/06 12:06:21 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** La funcion guarda suficiente memoria para copiar una string
+** entonces la copia y te de vuelve la new string
+**
+** @param {const char *s} es la string que quieres copiar
+**
+** @return {char} La nueva string despues de copiar
+*/
 char	*ft_strdup(const char *s1)
 {
 	int		i;

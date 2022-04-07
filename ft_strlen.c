@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 12:46:28 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/05 10:52:36 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/06 09:54:15 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 /*
 ** Cuenta la cantidad de caract de una string
 **
-** @param {const char} La string que quiers contar
+** @param {const char} La string que se quiere contar
 **
 ** @return {size_t} El nº de caracteres
 */
 size_t	ft_strlen(const char *str)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (str[count])

@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 11:18:09 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/06 15:21:51 by ygonzale         ###   ########.fr       */
+/*   Created: 2022/04/06 10:51:11 by ygonzale          #+#    #+#             */
+/*   Updated: 2022/04/06 10:57:38 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int i)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if ((i < 'A' || i > 'Z') && (i < 'a' || i > 'z'))
-		return (0);
-	return (1);
-}
+	char	*str;
 
-/* int	main(void)
-{
-	char	c = "ñ";
-
-	printf("%d", ft_isalpha(c));
+	str = malloc(sizeof(char *) * )
 }
- */

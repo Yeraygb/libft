@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:39:01 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/05 17:10:53 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/06 16:25:35 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 /*
 ** Funcion para buscar caracter que se repite desde el principio de la string
+** Recorre la string hasta que la coincidencia sea nulo y devuelve las veces que 
+** ha sumado
 */
-static size_t	ft_start(char const *s1, char const *set)
+static size_t	ft_start(char const *set, char const *s1)
 {
 	size_t	i;
 
@@ -35,15 +37,17 @@ static size_t	ft_start(char const *s1, char const *set)
 static size_t	ft_end(char const *s1, char const *set)
 {
 	size_t	len_s1;
+	size_t	i;
 
+	i = 0;
 	len_s1 = ft_strlen(s1);
-	while (s1[len_s1])
+	while (i < len_s1)
 	{
-		if (ft_strchr(set, s1[len_s1]) == 0)
+		if (ft_strchr(set, s1[len_s1 - i - 1]) == 0)
 			break ;
-		len_s1--;
+		i++;
 	}
-	return (len_s1);
+	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -52,31 +56,31 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 	size_t	i;
-	size_t	n;
 
 	start = ft_start(s1, set);
-	end = ft_end(s1, set);
-	i = 0;
-	str = malloc(sizeof(char *) * (start - end + 1));
+	end = ft_strlen(s1) - ft_end(s1, set);
+	if (start >= end)
+		return (ft_strdup(""));
+	str = malloc(sizeof(char *) * (end - start + 1));
 	if (!str)
 		return (NULL);
+	i = 0;
 	while (s1[i])
 	{
-		n = 0;
-		if (s1[i] == set[n])
-		{
-			str[i] = s1[i];
-			n++;
-		}
+		str[i] = s1[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
 
+/* 	ft_strlcpy(str, s1 + start, (end - start + 1)); */
+/* 	ft_substr(s1, start, (end - start)); */
+
 /* int	main(void)
 {
-	char	str[] = "holamundo";
-	char	a[] = "ho";
+	char	str[] = "lorem ipsum dolor sit amet";
+	char	a[] = "te";
 
 	printf("%s", ft_strtrim(str, a));
 }

@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:48:53 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/04 16:05:51 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/06 10:29:42 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strrchr(const char *s, int c)
 
 /* int	main(void)
 {
-	const char	s1[] = "hola muonde";
+	const char	s1[] = "hola muonde";,0
 	char	d = 'o';
 
 	printf("%s", ft_strrchr(s1, d));
