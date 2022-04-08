@@ -6,42 +6,32 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 12:06:40 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/05 09:12:18 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/08 13:32:56 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h> 
+#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*c;
 
-	c = (void *)malloc(count * size);
+	c = (void *)malloc(count);
 	if (!c)
 		return (NULL);
-	ft_bzero(c, count);
+	ft_bzero(c, count * size);
 	return (c);
 }
 
-/* int main ()
+/* #include <string.h>
+
+
+int main(void)
 {
-   int i, n;
-   int *a;
-
-   printf("Number of elements to be entered:");
-   scanf("%d",&n);
-
-   a = (int*)calloc(n, sizeof(int));
-   printf("Enter %d numbers:\n",n);
-   for( i=0 ; i < n ; i++ ) {
-      scanf("%d",&a[i]);
-   }
-
-   printf("The numbers entered are: ");
-   for( i=0 ; i < n ; i++ ) {
-      printf("%d ",a[i]);
-   }
-   free( a );
-   
-   return(0);
+	printf("%d", ft_calloc(SIZE_MAX, SIZE_MAX));
+  // calloc(SIZE_MAX, SIZE_MAX);
+	write(1, "\n", 1);
+	return (0);
 } */

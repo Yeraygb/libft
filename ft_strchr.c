@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 10:27:45 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/06 09:51:55 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/08 11:35:45 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,24 +27,24 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	n = ft_strlen(s);
-	if (n == '\0')
-		return ((char *)&s[0]);
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char) c)
 			return ((char *)&s[i]);
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == (unsigned char) c)
 		return ((char *)&s[i]);
 	return (NULL);
 }
 
 /* int	main(void)
 {
-	char	s1[] = "bonjour";
-	char	d = '\0';
-
-	printf("%s", ft_strchr(s1, d));
-	printf("%s", strchr(s1, d));
-} */
+	char	s1[] = "tripouille";
+//	char	d = 't' + 256;
+	printf("%s\n", ft_strchr(s1, 'z'));
+	printf("%s\n", strchr(s1, 'z'));
+	printf("%s\n", ft_strchr(s1, 't' + 256));
+	printf("%s", strchr(s1, 't' + 256));
+}
+ */

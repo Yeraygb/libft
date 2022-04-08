@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 16:51:17 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/03/31 13:24:24 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/07 17:09:32 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	char	*aux;
+	size_t			i;
 
-	aux = (char *) s;
 	i = 0;
 	while (i < n)
 	{
-		aux[i] = '\0';
+		((unsigned char *)s)[i] = '\0';
 		i++;
 	}
 }

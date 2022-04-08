@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:39:01 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/07 09:54:16 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/08 13:28:01 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	ft_start(char const *s1, char const *set)
 	while (i < len)
 	{
 		if (ft_strchr(set, s1[i]) == 0)
-			break ;
+			return (i);
 		i++;
 	}
 	return (i);
@@ -46,7 +46,7 @@ static size_t	ft_end(char const *s1, char const *set)
 	while (i < len_s1)
 	{
 		if (ft_strchr(set, s1[len_s1 - i - 1]) == 0)
-			break ;
+			return (i);
 		i++;
 	}
 	return (i);
@@ -76,8 +76,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /* int	main(void)
 {
-	char	str[] = "lorem ipsum dolor sit amet";
-	char	a[] = "l";
+	char	str[] = "lorem \n ipsum \t dolor \n sit \t amet";
+	char	a[] = " ";
 
 	printf("%s", ft_strtrim(str, a));
 }

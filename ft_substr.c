@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 09:14:22 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/07 12:24:13 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/08 12:07:13 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
-	str = malloc(sizeof(char *) * (len + 1));
+	if (len > strlen(s))
+		len = strlen(s);
+	str = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -49,7 +51,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 /* int	main(void)
 {
-	char	s1[] = "lorem ipsum dolor sit amet";
+	char	s1[] = "tripouille";
 
-	printf("%s", ft_substr(s1, 7, 10));<
-} */
+	printf("%s", ft_substr(s1, 0, 42000));
+}
+ */
