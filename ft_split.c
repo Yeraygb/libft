@@ -41,7 +41,7 @@ char	**ft_body(char const *s, char c)
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < s_len)
+	while (i < ft_strlen(s))
 	{
 		if (s[i] == c)
 			str = ft_substr(s, count_s(s[i], c), strlen(s));
