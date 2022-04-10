@@ -46,5 +46,4 @@ int	ft_atoi(const char *str)
 
 	printf("%d\n", ft_atoi(a));
 	printf("%d", atoi(a));
-}
-*/
+} */

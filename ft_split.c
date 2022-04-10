@@ -20,29 +20,40 @@ static int	count_s(char const *s, char c)
 	i = 0;
 	while (s[i])
 	{
-		while (s[i] != c && s[i])
+		while (s[i] == c && s[i])
 			i++;
-		if (s[i] == c)
+		if (s[i] != c)
 			count++;
+		while (s[i] != c)
+			i++;
+	}
+	return (count);
+}
+
+char	**ft_body(char const *s, char c)
+{
+	char	**str;
+	size_t	i;
+	size_t	s_len;
+
+	s_len = count_s(s, c);
+	str = (char *)malloc(sizeof(*s) * s_len + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < s_len)
+	{
+		if (s[i] == c)
+			str = ft_substr(s, count_s(s[i], c), strlen(s));
 		i++;
 	}
-	return (i);
+	str[i] = NULL;
+	return (str);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**str;
-	size_t	i;
-
-	*str = (char *)malloc(sizeof(*s) * (s - (count_s(s, c)) + 1));
-	i = 0;
-	ft_substr(s, s[0], count_s(s, c));
-	while (s[i])
-	{
-		if (s[1] == c)
-			ft_substr(s, count_s(s, c), strlen(s));
-		i++;
-	}
+	if (!s)
+		return (NULL);
+	return (ft_body (s, c));
 }
-
-+++afa+aad++adaf+++afaf

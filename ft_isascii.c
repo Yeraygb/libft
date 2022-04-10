@@ -19,11 +19,10 @@ int	ft_isascii(int c)
 	return (0);
 }
 
-/*int	main(void)
+/* int	main(void)
 {
 	int	c;
 
 	c = 45;
 	printf ("%d", ft_isascii(c));
-}
-*/
+} */
