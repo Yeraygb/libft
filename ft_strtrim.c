@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:39:01 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/08 13:28:01 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/08 16:31:59 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str = ft_substr(s1, start, (end - start));
 	return (str);
 }
-
-/* 	ft_strlcpy(str, s1 + start, (end - start + 1)); */
-/* 	while (s1[i])
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	str[i] = '\0'; */
 
 /* int	main(void)
 {

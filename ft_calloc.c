@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 12:06:40 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/08 13:32:56 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/12 10:25:16 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*c;
 
-	c = (void *)malloc(count);
+	c = (void *)malloc(count * size);
 	if (!c)
 		return (NULL);
 	ft_bzero(c, count * size);

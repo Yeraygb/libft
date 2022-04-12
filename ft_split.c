@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 13:45:11 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/11 12:57:12 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/12 09:16:26 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	*ft_subsplit(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*str;
 
-	str = malloc(sizeof(char *) * (start - len + 1));
+	str = malloc(sizeof(char *) * (len - start + 1));
 	if (!str)
 		return (NULL);
 	while (start < len)

@@ -1,39 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/07 12:27:17 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/12 16:23:41 by ygonzale         ###   ########.fr       */
+/*   Created: 2022/04/12 12:08:10 by ygonzale          #+#    #+#             */
+/*   Updated: 2022/04/12 13:25:17 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
+	del(lst->content);
+	free (lst);
 }
-
-/* void	f(unsigned int a, char *c)
-{
-	printf("%d", a);
-	printf("%s", c);
-}
-
-int	main(void)
-{
-	char	c[] = "hola";
-
-	ft_striteri(c, f);
-}
- */

@@ -6,12 +6,15 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 10:04:47 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/05 12:01:08 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/11 13:39:07 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** La funcon separa una string en dos substring desde la coincidencia de c
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
@@ -22,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
-	str = malloc(sizeof(char *) * (len_s1 + len_s2 + 1));
+	str = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
 	if (!str)
 		return (NULL);
 	while (s1[i])
