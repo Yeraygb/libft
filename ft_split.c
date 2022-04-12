@@ -60,13 +60,16 @@ static char	**ft_body(char **dest, char const *src, char c)
 	count = 0;
 	while (src[i])
 	{
-		if (src[i] != c)
+		while (src[i] != c && src[i])
 		{
-			dest[j] = ft_subsplit[src, count, i];
 			i++;
-			j++;
+			if (src[i] == c)
+			{
+				dest[j] = ft_subsplit[src, count, i];
+				j++;
+			}
 		}
-		if (src[i] == c)
+		while (src[i] == c)
 		{
 			i++;
 			count = i;
@@ -82,7 +85,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	str = malloc(sizeof(char *) * ft_count_s(s, c));
+	str = malloc(sizeof(char *) * ft_count_s(s, c) + 1);
 	if (!str)
 		return (NULL);
 	ft_body(str, s, c);
@@ -96,36 +99,3 @@ char	**ft_split(char const *s, char c)
 
 	printf("%s", ft_split(s, c));
 } */
-
-/* char	**ft_body(char const *s, char c)
-{
-	char	**str;
-	size_t	i;
-	size_t	n;
-	size_t	count;
-	size_t	s_len;
-
-	i = -1;
-	n = 0;
-	count = -1;
-	s_len = count_s(s, c);
-	printf("%zu", s_len);
-	str = (char **)malloc(sizeof(char *) * s_len + 1);
-	if (!str)
-		return (NULL);
-	while (i < ft_strlen(s))
-	{
-		if (s[i] != c && count < 0)
-			count = i;
-		else if (s[i] == c && count >= 0)
-		{
-			*str = ft_substr(s, count, i - count);
-			count = -1;
-			n++;
-		}
-		i++;
-	}
-	str[i] = NULL;
-	return (str);
-}
-*/
