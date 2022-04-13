@@ -6,7 +6,7 @@
 #    By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/01 10:12:49 by ygonzale          #+#    #+#              #
-#    Updated: 2022/04/12 16:54:16 by ygonzale         ###   ########.fr        #
+#    Updated: 2022/04/13 16:47:40 by ygonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c \
 		ft_toupper.c ft_strdup.c ft_substr.c \
 		ft_strjoin.c ft_strtrim.c ft_strmapi.c \
 		ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c \
-		ft_putendl_fd.c ft_putnbr_fd.c 
+		ft_putendl_fd.c ft_putnbr_fd.c ft_split.c \
+		ft_itoa.c
 
 SRC_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c ft_lstlast_bonus.c \

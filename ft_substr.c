@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 09:14:22 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/12 16:51:26 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/13 15:43:39 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
+	if (!s)
+		return (NULL);
 	if (len > strlen(s))
 		len = strlen(s);
 	str = (char *)malloc(sizeof(*s) * (len + 1));

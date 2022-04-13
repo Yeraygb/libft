@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 16:46:33 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/07 16:55:19 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/13 15:44:19 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	aux2 = (unsigned char *) s2;
 	while (i < n)
 	{
-		if (aux1[i] > aux2[i])
-			return (1);
-		if (aux1[i] < aux2[i])
-			return (-1);
+		if (aux1[i] != aux2[i])
+			return (aux1[i] - aux2[i]);
 		i++;
 	}
 	return (0);

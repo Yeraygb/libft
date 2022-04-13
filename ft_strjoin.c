@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 10:04:47 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/11 13:39:07 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/13 15:49:05 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	str = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
@@ -36,9 +38,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (s2[i])
 	{
-		str[len_s1] = s2[i];
-		i++;
-		len_s1++;
+		str[len_s1++] = s2[i++];
 	}
 	str[len_s1] = '\0';
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 11:37:16 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/04 16:28:16 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/13 15:16:43 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,16 @@ void	*ft_memcpy(void *dest, const void	*src, size_t n)
 	auxd = (unsigned char *) dest;
 	auxs = (unsigned const char *) src;
 	i = 0;
-	while (i < n)
+	if (dest || src)
 	{
-		auxd[i] = auxs[i];
-		i++;
+		while (i < n)
+		{
+			auxd[i] = auxs[i];
+			i++;
+		}
+		return (dest);
 	}
-	return (dest);
+	return (NULL);
 }
 
 /* int	main(void)

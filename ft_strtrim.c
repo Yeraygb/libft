@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:39:01 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/08 16:31:59 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/13 15:50:03 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = ft_start(s1, set);
 	end = ft_strlen(s1) - ft_end(s1, set);
 	if (start >= end)
