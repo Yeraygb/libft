@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 13:45:11 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/13 14:50:37 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:49:18 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	str = (char **)malloc(sizeof(char *) * ft_count_s(s, c) + 1);
+	str = (char **)malloc(sizeof(char *) * (ft_count_s(s, c) + 1));
 	if (!str)
 		return (NULL);
 	ft_body(str, s, c);

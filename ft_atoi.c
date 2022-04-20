@@ -6,7 +6,7 @@
 /*   By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 10:58:17 by ygonzale          #+#    #+#             */
-/*   Updated: 2022/04/13 16:43:13 by ygonzale         ###   ########.fr       */
+/*   Updated: 2022/04/19 12:16:51 by ygonzale         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *str)
 
 /* int	main(void)
 {
-	char	a[] = "  --1234a4";
+	char	a[] = "  --1324a4";
 
 	printf("%d\n", ft_atoi(a));
 	printf("%d", atoi(a));

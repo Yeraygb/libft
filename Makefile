@@ -6,7 +6,7 @@
 #    By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/01 10:12:49 by ygonzale          #+#    #+#              #
-#    Updated: 2022/04/13 16:47:40 by ygonzale         ###   ########.fr        #
+#    Updated: 2022/04/20 09:06:07 by ygonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRC = ft_atoi.c ft_bzero.c ft_calloc.c \
 SRC_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c ft_lstlast_bonus.c \
 			ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c
+			ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJS = $(SRC:.c=.o)
 
