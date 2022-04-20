@@ -6,7 +6,7 @@
 #    By: ygonzale <ygonzale@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/01 10:12:49 by ygonzale          #+#    #+#              #
-#    Updated: 2022/04/20 09:06:07 by ygonzale         ###   ########.fr        #
+#    Updated: 2022/04/20 10:15:28 by ygonzale         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ clean:
 	@rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean:
-	@rm -f $(NAME)
+	@rm -f $(OBJS) $(OBJS_BONUS) $(NAME)
 
 re:	fclean all
 
